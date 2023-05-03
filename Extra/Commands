@@ -1,0 +1,3 @@
+docker network create cima
+docker run --rm -it -p 5077:5077/tcp --network cima --name cimaapi --env-file API.env cimademodocker:latest 
+docker run --rm -it -p 1433:1433/tcp --network cima --name cimasql cimademodockersql:latest 
